@@ -38,7 +38,7 @@ android {
 ext.supportLibVersion = '27.1.1'
 
 dependencies {
-    implementation project(':matisse')
+    implementation project(':selector')
 
 //    implementation 'com.zhihu.android:matisse:0.5.1-beta1'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
