@@ -34,7 +34,6 @@ import android.widget.Toast;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 import com.zhihu.matisse.Matisse;
 import com.zhihu.matisse.MimeType;
-import com.zhihu.matisse.engine.impl.PicassoEngine;
 import com.zhihu.matisse.filter.Filter;
 import com.zhihu.matisse.internal.entity.CaptureStrategy;
 import com.zhihu.matisse.listener.OnCheckedListener;
@@ -121,8 +120,8 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
                                             .addFilter(new GifSizeFilter(320, 320, 5 * Filter.K * Filter.K))
                                             .maxSelectable(9)
                                             .originalEnable(true)
+                                            .imageEngine(new Glide4Engine())    // for glide-V4
                                             .maxOriginalSize(10)
-                                            .imageEngine(new PicassoEngine())
                                             .forResult(REQUEST_CODE_CHOOSE);
                                     break;
                                 default:
